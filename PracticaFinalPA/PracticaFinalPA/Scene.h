@@ -13,7 +13,8 @@
 
 class Scene {
 private:
-    bool ended = false;
+    bool win = false;
+    bool loose = false;
     float timer = 1000;
     const float aceleracion = 0.00005;
     FlyingCamera camera;
@@ -43,6 +44,7 @@ public:
     void processMouseMovement(const int& x, const int& y);
     void processMouseClick(const int& button, const int& state, const int& x, const int& y);
     void processKeyPressed(unsigned char key, int px, int py);
+    void RenderText(string str);
 };
 
 
