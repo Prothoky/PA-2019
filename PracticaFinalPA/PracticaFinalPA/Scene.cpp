@@ -118,14 +118,15 @@ void Scene::update(const float &deltaTime)
                 */
             }
             if (loose) {
-                cout << "Te has chocado payaso. HAS PERDIDO" << endl;
+                cout << "HAS PERDIDO" << endl;
+                cout << "Pulsa la tecla 'P' para reiniciar el nivel" << endl;
             }
         }
         else {
             win = true;
-            //ShowText();
             cout << "TIME OUT!" << endl;
             cout << "YOU WIN!" << endl;
+            cout << "Pulsa la tecla 'P' para reiniciar el nivel" << endl;
         }
     }
 }
