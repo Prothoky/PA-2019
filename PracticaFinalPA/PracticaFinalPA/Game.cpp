@@ -42,7 +42,8 @@ void Game::create()
         cubes[index].setIsAffectedByGravity(false);
 		cubes[index].setSpeed(Vector3D(-0.2f, 0.0f, 0.0f));
         cubes[index].setOrientationSpeed(Vector3D(0.0f));
-        //cubes[index].LoadModel("Moon.obj");
+        if(index <4)cubes[index].LoadModel("Asteroid_round.obj");
+        else cubes[index].LoadModel("Asteroid.obj");
         mainScene->addObstacleObject(cubes + index);
     }
 

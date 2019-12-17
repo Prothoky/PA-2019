@@ -17,7 +17,7 @@ void Cube::render() const {
     glRotatef(getOrientation().getY(), 0.0, 1.0, 0.0);
     glRotatef(getOrientation().getZ(), 0.0, 0.0, 1.0);
     glColor3f(getColor().getRed(), getColor().getGreen(), getColor().getBlue());
-    glutSolidCube(getSize());
+    //glutSolidCube(getSize());
 	for (Triangle* triangle : this->gettriangles())
 	{
 		triangle->Render();

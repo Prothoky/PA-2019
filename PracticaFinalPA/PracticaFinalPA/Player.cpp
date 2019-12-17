@@ -38,13 +38,14 @@ collisionPoints(), collisionPointsNumber(collisionPointsNumber) {}
 
 void Player::render() const {
 	glPushMatrix();
+	glScalef(0.75, 0.75, 0.75);
 	glTranslatef(getPosition().getX(), getPosition().getY(), getPosition().getZ());
 	glRotatef(getOrientation().getX(), 1.0, 0.0, 0.0);
 	glRotatef(getOrientation().getY(), 0.0, 1.0, 0.0);
 	glRotatef(getOrientation().getZ(), 0.0, 0.0, 1.0);
 	glColor3f(getColor().getRed(), getColor().getGreen(), getColor().getBlue());
 	//Este sería el cono de colision deberia comentarse para que no se vea
-	glutSolidCone(1.75, 4.5, 15, 15);
+	glutSolidCone(1.0, 3.0, 15, 15);
 	for (Triangle* triangle : this->gettriangles())
 	{
 		triangle->Render();
