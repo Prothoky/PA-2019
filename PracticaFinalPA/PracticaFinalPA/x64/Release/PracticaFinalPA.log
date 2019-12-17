@@ -1,0 +1,48 @@
+﻿  Camera.cpp
+  Color.cpp
+  Cube.cpp
+  Cuboid.cpp
+  Cylinder.cpp
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Cylinder.cpp(11,18): warning C4150: eliminación de puntero a tipo 'GLUquadric' incompleto; no se ha llamado a un destructor
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\GL\glu.h(163): message : vea la declaración de 'GLUquadric'
+  Engine.cpp
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(13,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(15,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.h(16,38): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.h(24,104): warning C4305: 'argumento': truncamiento de 'double' a 'const float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Game.h(19,9): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+  FlyingCamera.cpp
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(13,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(15,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.cpp(16,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.cpp(17,30): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  Game.cpp
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(13,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(15,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.h(16,38): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.h(24,104): warning C4305: 'argumento': truncamiento de 'double' a 'const float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Game.h(19,9): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Game.cpp(38,73): warning C4244: 'argumento': conversión de 'int' a 'const float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Game.cpp(38,49): warning C4244: 'argumento': conversión de 'int' a 'const float'; posible pérdida de datos
+  GameObject.cpp
+  Player.cpp
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Player.cpp(36,145): warning C4305: 'argumento': truncamiento de 'double' a 'const float'
+  Scene.cpp
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(13,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(15,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.h(16,38): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.h(24,104): warning C4305: 'argumento': truncamiento de 'double' a 'const float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.cpp(52,99): warning C4244: 'argumento': conversión de 'int' a 'const float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.cpp(52,75): warning C4244: 'argumento': conversión de 'int' a 'const float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.cpp(83,95): warning C4244: 'argumento': conversión de 'int' a 'const float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.cpp(83,71): warning C4244: 'argumento': conversión de 'int' a 'const float'; posible pérdida de datos
+  Sphere.cpp
+  Teapot.cpp
+  Torus.cpp
+  Triangle.cpp
+  Vector3D.cpp
+  Generando código
+  Previous IPDB not found, fall back to full compilation.
+  All 514 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  PracticaFinalPA.vcxproj -> C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\x64\Release\PracticaFinalPA.exe

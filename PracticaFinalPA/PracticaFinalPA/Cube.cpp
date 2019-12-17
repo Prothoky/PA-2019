@@ -18,6 +18,10 @@ void Cube::render() const {
     glRotatef(getOrientation().getZ(), 0.0, 0.0, 1.0);
     glColor3f(getColor().getRed(), getColor().getGreen(), getColor().getBlue());
     glutSolidCube(getSize());
+	for (Triangle* triangle : this->gettriangles())
+	{
+		triangle->Render();
+	}
     glPopMatrix();
 }
 

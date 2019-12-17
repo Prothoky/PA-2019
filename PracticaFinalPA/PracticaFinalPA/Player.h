@@ -7,6 +7,7 @@
 
 class Player : public GameObject {
 private:
+
 	float collisionPoints[4] = { -1.0, 4, 1.0, 4 };	//Coordenadas de los puntos de colisión. Van x, z para cada punto (x[0], z[0], x[1], z[1], x[2], z[2]...)
 	int collisionPointsNumber = 2;	//Número de puntos de colisión
 

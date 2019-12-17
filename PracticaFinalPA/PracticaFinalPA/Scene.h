@@ -13,9 +13,13 @@
 
 class Scene {
 private:
+    bool ended = false;
+    float timer = 1000;
+    const float aceleracion = 0.00005;
     FlyingCamera camera;
 	Player player;
-    std::vector<GameObject*> gameObjects;
+    vector<GameObject*> ObstaclesObjects; 
+    vector<GameObject*> SceneObjects;
     Vector3D size;
     Vector3D gravity;
 public:
@@ -30,7 +34,8 @@ public:
 	Player* getPlayer() { return &(this->player); }
 	void setPlayer(Player playerToSet) { this->player = playerToSet; }
 
-    void addGameObject(GameObject* solidToAdd);
+    void addObstacleObject(GameObject* solidToAdd);
+    void addSceneObject(GameObject* solidToAdd);
     void clearScene();
     void render();
     void update(const float &deltaTime);

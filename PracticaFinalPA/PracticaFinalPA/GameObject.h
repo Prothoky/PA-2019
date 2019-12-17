@@ -7,9 +7,27 @@
 
 #include "Vector3D.h"
 #include "Color.h"
+#include "Triangle.h"
+#include <vector>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+
+using namespace std;
 
 class GameObject {
 private:
+
+    vector<Vector3D*> vertexes;
+    vector<Vector3D*> textures;
+    vector<Vector3D*> normals;
+
+    vector<Triangle*> triangles;
+
+    Vector3D* parseLineToVector3D(string& line);
+    Triangle* parseFace(string& line);
+
     Vector3D position;
     Color color;
     Vector3D speed;
@@ -28,6 +46,7 @@ public:
     Vector3D getSpeed() const { return this->speed; }
     Vector3D getOrientation() const { return this->orientation; }
     Vector3D getOrientationSpeed() const { return this->orientationSpeed; }
+    vector<Triangle*> gettriangles() const { return this->triangles; }
     bool getIsAffectedByGravity() const { return this->isAffectedByGravity; }
 	bool getCollidable() const { return this->collidable; };
     void setPosition(const Vector3D &vector) { this->position = vector; }
@@ -43,6 +62,7 @@ public:
     virtual void update(const float &deltaTime, const Vector3D& gravity); //virtual void update(const float &deltaTime, const int &limit) = 0;
 
 	virtual bool checkCollisionZX(const float& z, const float& x) const = 0;	//Devuelve si la posición pasada como parámetro colisiona (tienendo en cuenta únicamente las coordenadas z, x)
+    void LoadModel(const string& s);
 };
 
 

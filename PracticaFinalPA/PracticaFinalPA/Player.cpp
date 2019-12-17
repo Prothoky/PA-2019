@@ -43,7 +43,11 @@ void Player::render() const {
 	glRotatef(getOrientation().getY(), 0.0, 1.0, 0.0);
 	glRotatef(getOrientation().getZ(), 0.0, 0.0, 1.0);
 	glColor3f(getColor().getRed(), getColor().getGreen(), getColor().getBlue());
-	glutSolidCone(1.0, 3.0, 15, 15);
+	//glutSolidCone(1.0, 3.0, 15, 15);
+	for (Triangle* triangle : this->gettriangles())
+	{
+		triangle->Render();
+	}
 	glPopMatrix();
 }
 
