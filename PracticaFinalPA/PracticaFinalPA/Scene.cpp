@@ -150,12 +150,12 @@ void Scene::processKeyPressed(unsigned char key, int px, int py)
 
 void Scene::RenderText(string str)
 {
-        glColor3f(1.0f, 1.0f, 1.0f);
-        glRasterPos3f(7.5f, 5.0f, -1.0f);
-        stringstream strm;
-        strm << str << endl;
-        string text = strm.str();
-        for (string::iterator it = text.begin(); it != text.end(); ++it) {
-            glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, *it);
-        }
+    glColor3f(1.0f, 1.0f, 1.0f);
+    glRasterPos3f(7.5f, 5.0f, -1.0f);
+    stringstream strm;
+    strm << str << endl;
+    string text = strm.str();
+    for (string::iterator it = text.begin(); it != text.end(); ++it) {
+        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, *it);
     }
+}

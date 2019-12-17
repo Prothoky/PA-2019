@@ -21,7 +21,7 @@ public:
 	void create();
 	void render();
 	void update();
-
+	void reset();
     void processMouseMovement(const int& xPosition, const int& yPosition);
     void processKeyPressed(const unsigned char& key, const int& xPosition, const int& yPosition);
     void processMouseClick(const int& button, const int& state, const int& xPosition, const int& yPosition);

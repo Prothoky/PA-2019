@@ -107,9 +107,20 @@ void Game::processMouseMovement(const int& xPosition, const int& yPosition)
 void Game::processKeyPressed(const unsigned char& key, const int& xPosition, const int& yPosition)
 {
     this->activeScene->processKeyPressed(key, xPosition, yPosition);
+    switch (key) {
+    case 'p':
+    case 'P':
+        reset();
+    break;
+    }
 }
 
 void Game::processMouseClick(const int& button, const int& state, const int& xPosition, const int& yPosition)
 {
     this->activeScene->processMouseClick(button, state, xPosition, yPosition);
+}
+
+void Game::reset() {
+    this->activeScene->clearScene();
+    create();
 }
