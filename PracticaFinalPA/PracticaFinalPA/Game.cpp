@@ -64,7 +64,7 @@ void Game::create()
 	//Suelo
     Cuboid* floor = new Cuboid();
     floor->setPosition(Vector3D(50.0f, 0.0f, 0.0f));
-    floor->setColor(Color(0.2f, 0.9f, 0.2f));
+    floor->setColor(Color(0.5f, 0.5f, 0.5f));
     floor->setHeight(2.0f);
     floor->setLength(200.0f);
     floor->setWidth(25.0f);

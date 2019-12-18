@@ -151,7 +151,7 @@ void Scene::processKeyPressed(unsigned char key, int px, int py)
 
 void Scene::RenderText(string str)
 {
-    glColor3f(1.0f, 1.0f, 1.0f);
+    glColor3f(1.0f, 0.0f, 0.0f);
     glRasterPos3f(7.5f, 5.0f, -1.0f);
     stringstream strm;
     strm << str << endl;

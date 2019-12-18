@@ -60,6 +60,7 @@ void Player::processKeyPressed(unsigned char key, int px, int py)
 	case 'a':
 	case 'A':
 		if (this->getPosition().getZ() > -9.0) {
+			//this->setOrientation(Vector3D(0.0f,90.0f,-45.0f));
 			newPosition.setZ(newPosition.getZ() - this->getSpeed().getZ());
 			collisionPoints[0] -= this->getSpeed().getZ();
 			collisionPoints[2] -= this->getSpeed().getZ();
@@ -71,7 +72,8 @@ void Player::processKeyPressed(unsigned char key, int px, int py)
 		break;
 	case 'd':
 	case 'D':
-		if (this->getPosition().getZ() < 9.0) {
+		if (this->getPosition().getZ() < 19.0) {
+			//this->setOrientation(Vector3D(0.0f, 90.0f, 45.0f));
 			newPosition.setZ(newPosition.getZ() + this->getSpeed().getZ());
 			collisionPoints[0] += this->getSpeed().getZ();
 			collisionPoints[2] += this->getSpeed().getZ();
