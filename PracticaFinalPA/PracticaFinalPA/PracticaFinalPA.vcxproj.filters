@@ -63,19 +63,10 @@
     <ClCompile Include="Player.cpp">
       <Filter>Archivos de origen\Cores</Filter>
     </ClCompile>
-    <ClCompile Include="Torus.cpp">
-      <Filter>Archivos de origen\Figuras</Filter>
-    </ClCompile>
     <ClCompile Include="Cuboid.cpp">
       <Filter>Archivos de origen\Figuras</Filter>
     </ClCompile>
     <ClCompile Include="Cylinder.cpp">
-      <Filter>Archivos de origen\Figuras</Filter>
-    </ClCompile>
-    <ClCompile Include="Sphere.cpp">
-      <Filter>Archivos de origen\Figuras</Filter>
-    </ClCompile>
-    <ClCompile Include="Teapot.cpp">
       <Filter>Archivos de origen\Figuras</Filter>
     </ClCompile>
     <ClCompile Include="Cube.cpp">
@@ -93,15 +84,6 @@
       <Filter>Archivos de encabezado\Figuras</Filter>
     </ClInclude>
     <ClInclude Include="Cylinder.h">
-      <Filter>Archivos de encabezado\Figuras</Filter>
-    </ClInclude>
-    <ClInclude Include="Teapot.h">
-      <Filter>Archivos de encabezado\Figuras</Filter>
-    </ClInclude>
-    <ClInclude Include="Sphere.h">
-      <Filter>Archivos de encabezado\Figuras</Filter>
-    </ClInclude>
-    <ClInclude Include="Torus.h">
       <Filter>Archivos de encabezado\Figuras</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">

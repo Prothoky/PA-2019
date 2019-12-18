@@ -3,12 +3,9 @@
 #include <string>
 
 #include "Cube.h"
-#include "Teapot.h"
-#include "Sphere.h"
 #include "Camera.h"
 #include "Scene.h"
 #include "Game.h"
-
 
 using namespace std;
 

@@ -1,3 +1,9 @@
-﻿  Player.cpp
-C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Player.cpp(36,145): warning C4305: 'argumento': truncamiento de 'double' a 'const float'
+﻿  Game.cpp
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(13,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\FlyingCamera.h(15,56): warning C4244: 'return': conversión de 'const int' a 'float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.h(19,38): warning C4305: 'inicializando': truncamiento de 'double' a 'const float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Scene.h(27,104): warning C4305: 'argumento': truncamiento de 'double' a 'const float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Game.h(19,9): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Game.cpp(38,73): warning C4244: 'argumento': conversión de 'int' a 'const float'; posible pérdida de datos
+C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\PracticaFinalPA\Game.cpp(38,49): warning C4244: 'argumento': conversión de 'int' a 'const float'; posible pérdida de datos
   PracticaFinalPA.vcxproj -> C:\Users\Proth\Documents\PA\PA-2019\PracticaFinalPA\x64\Debug\PracticaFinalPA.exe
