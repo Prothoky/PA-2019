@@ -2,10 +2,7 @@
 
 #include "Game.h"
 #include "Cube.h"
-#include "Sphere.h"
-#include "Teapot.h"
 #include "Cylinder.h"
-#include "Torus.h"
 #include "Cuboid.h"
 
 void Game::create()
@@ -17,9 +14,10 @@ void Game::create()
    
 	Scene* mainScene = new Scene(Vector3D(0.0f, 10.0f, 0.0f), Vector3D(100.0f, 10.0f, 10.0f));
 	FlyingCamera mainCamera = mainScene->getCamera();
-    mainCamera.setPosition(Vector3D(0.0f, 8.0f, 0.0f));
-    mainCamera.setOrientation(Vector3D(20.0f, 90.0f, 0.0f));
-    mainScene->setCamera(mainCamera);
+	mainCamera.setPosition(Vector3D(-4.0f, 10.0f, 0.0f));
+	mainCamera.setOrientation(Vector3D(32.0f, 90.0f, 0.0f));
+	mainScene->setCamera(mainCamera);
+
 
 	//Configuramos Player
 	Player player(Vector3D(4.0f, 3.0f, 0.0f));
@@ -29,51 +27,37 @@ void Game::create()
 	mainScene->setPlayer(player);
 
 	//Creamos 5 cubos en el suelo a una distancia variable entre 50 y 100 de longitud
-	int numberOfCubes = 7;
-    Cube* cubes = new Cube[numberOfCubes];
-    for (int index = 0; index < numberOfCubes; index++)
-    {
-        
-        cubes[index] = Cube();
+	int numberOfCubes = 3;
+	Cube* cubes = new Cube[numberOfCubes];
+	for (int index = 0; index < numberOfCubes; index++)
+	{
+		cubes[index] = Cube();
 		cubes[index].setPosition(Vector3D(rand() % 50 + 50, 2.5f, rand() % 20 - 10));
 		cubes[index].setOrientation(Vector3D(1.0f, 0.0f, 0.0f));
 		cubes[index].setColor(Color(1.0f, 0.1f, 0.1f));
-        cubes[index].setSize(2.0f);
-        cubes[index].setIsAffectedByGravity(false);
+		cubes[index].setSize(2.0f);
+		cubes[index].setIsAffectedByGravity(false);
 		cubes[index].setSpeed(Vector3D(-0.2f, 0.0f, 0.0f));
-        cubes[index].setOrientationSpeed(Vector3D(0.0f));
-        if(index <4)cubes[index].LoadModel("Asteroid_round.obj");
-        else cubes[index].LoadModel("Asteroid.obj");
-        mainScene->addObstacleObject(cubes + index);
-    }
+		cubes[index].setOrientationSpeed(Vector3D(0.0f));
+		cubes[index].LoadModel("Asteroid_round.obj");
+		mainScene->addObstacleObject(cubes + index);
+	}
 
-    //Cube* pointerToCubes = new Cube[4];
-    //if (pointerToCubes != nullptr) {
-    //    for (int index = 0; index < 4; index++) {
-    //        pointerToCubes[index] = Cube(
-    //                Vector3D((0.2 + index * 0.1), (0.3 + index * 0.1), (0.1 + index * 0.1)),
-    //                Color((0.2 + index * 0.2), (0.4 + index * 0.1), (0.7 + index * 0.1)),
-    //                Vector3D((0.02 + index * 0.01), (0.2 + index * 0.01), (0.1 + index * 0.01)),
-    //                0.1 + index * 0.1
-    //        );
-    //        pointerToCubes[index].setOrientationSpeed(Vector3D(10.0f, 1.0f, 0.0f));
-    //        mainScene->addObstacleObject(pointerToCubes + index);
-    //    }
-    //}
+	int numberOfCylinders = 3;
+	Cylinder* cylinders = new Cylinder[numberOfCylinders];
+	for (int index = 0; index < numberOfCylinders; index++)
+	{
+		cylinders[index] = Cylinder();
+		cylinders[index].setPosition(Vector3D(rand() % 50 + 50, 2.5f, rand() % 19 - 9));
+		cylinders[index].setOrientation(Vector3D(-90.0f, 0.0f, 0.0f));
+		cylinders[index].setColor(Color(1.0f, 0.1f, 0.1f));
+		cylinders[index].setIsAffectedByGravity(false);
+		cylinders[index].setSpeed(Vector3D(-0.2f, 0.0f, 0.0f));
+		cylinders[index].setOrientationSpeed(Vector3D(0.0f));
+		cylinders[index].LoadModel("Asteroid.obj");
+		mainScene->addObstacleObject(cylinders + index);
+	}
 
-   /* 
-   Sphere* pointerToSphere = nullptr;
-
-
-    pointerToSphere = new Sphere(
-            Vector3D((0.3), (0.4), (0.9)),
-            Color((0.8), (0.7), (0.2)),
-            Vector3D((0.2), (0.3), (0.1)),
-            Vector3D(),
-            0.4
-    );
-    mainScene->addSceneObject(pointerToSphere);
-    */
 
 	//Suelo
     Cuboid* floor = new Cuboid();
@@ -81,10 +65,11 @@ void Game::create()
     floor->setColor(Color(0.2f, 0.9f, 0.2f));
     floor->setHeight(2.0f);
     floor->setLength(200.0f);
-    floor->setWidth(20.0f);
+    floor->setWidth(25.0f);
     floor->setIsAffectedByGravity(false);
 	floor->setCollidable(false);
     mainScene->addSceneObject(floor);
+
 
     this->scenes.push_back(mainScene);
     this->activeScene = mainScene;

@@ -9,6 +9,7 @@ private:
 	float radius;
 	float height;
 public:
+	Cylinder();
 	Cylinder(float radius, float height);
 	~Cylinder();
 	inline float getRadius() const { return this->radius; }

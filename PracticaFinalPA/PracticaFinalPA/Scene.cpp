@@ -39,7 +39,7 @@ void Scene::render()
         this->SceneObjects[idx]->render();
     }
     if (loose) {
-        string str = "YOU LOOSE";
+        string str = "YOU LOSE";
         RenderText(str);
     }
     if (win) {
@@ -92,7 +92,7 @@ void Scene::update(const float &deltaTime)
                 this->SceneObjects[idx]->update(deltaTime, this->gravity);//, this->getGravity());
 
                 if (this->SceneObjects[idx]->getPosition().getX() > this->getSize().getX() || this->SceneObjects[idx]->getPosition().getX() < 0) {
-                    this->SceneObjects[idx]->setPosition(Vector3D(rand() % 50 + 50, 2.5f, rand() % 20 - 10));
+                    this->SceneObjects[idx]->setPosition(Vector3D(rand() % 50 + 50, 2.5f, rand() % 19 - 9));
                 }
 
                 //Comprobamos colisiones

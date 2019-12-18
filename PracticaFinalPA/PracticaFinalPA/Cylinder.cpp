@@ -1,5 +1,12 @@
 #include "Cylinder.h"
 
+Cylinder::Cylinder() {
+	this->quadratic = gluNewQuadric();
+	this->radius = 1;
+	this->height = 6;
+}
+
+
 Cylinder::Cylinder(float baseRadius, float cylinderHeight) {
 	this->quadratic = gluNewQuadric();
 	this->radius = baseRadius;
@@ -7,9 +14,7 @@ Cylinder::Cylinder(float baseRadius, float cylinderHeight) {
 }
 
 Cylinder::~Cylinder()
-{
-	delete quadratic;
-}
+{}
 
 void Cylinder::render()const {
 	glPushMatrix();
@@ -18,12 +23,18 @@ void Cylinder::render()const {
 	glRotatef(getOrientation().getX(), 1.0, 0.0, 0.0);
 	glRotatef(getOrientation().getY(), 0.0, 1.0, 0.0);
 	glRotatef(getOrientation().getZ(), 0.0, 0.0, 1.0);
-	gluCylinder(this->getQuadratic(), this->getRadius(), this->getRadius(), this->getHeight(), 16, 16);
+	//gluCylinder(this->getQuadratic(), this->getRadius(), this->getRadius(), this->getHeight(), 16, 16);
+	for (Triangle* triangle : this->gettriangles())
+	{
+		triangle->Render();
+	}
 	glPopMatrix();
 }
 
 bool Cylinder::checkCollisionZX(const float& z, const float& x) const {
 	bool collision = false;
-	// POR RELLENAR
+	if ((z - this->getPosition().getZ()) * (z - this->getPosition().getZ()) + (x - this->getPosition().getX()) * (x - this->getPosition().getX()) <= this->getRadius() * this->getRadius()) {
+		collision = true;
+	}
 	return collision;
 }

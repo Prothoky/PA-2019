@@ -38,7 +38,7 @@ collisionPoints(), collisionPointsNumber(collisionPointsNumber) {}
 
 void Player::render() const {
 	glPushMatrix();
-	glScalef(0.75, 0.75, 0.75);
+	//glScalef(0.75, 0.75, 0.75);
 	glTranslatef(getPosition().getX(), getPosition().getY(), getPosition().getZ());
 	glRotatef(getOrientation().getX(), 1.0, 0.0, 0.0);
 	glRotatef(getOrientation().getY(), 0.0, 1.0, 0.0);
@@ -59,17 +59,27 @@ void Player::processKeyPressed(unsigned char key, int px, int py)
 	switch (key) {
 	case 'a':
 	case 'A':
-		newPosition.setZ(newPosition.getZ() - this->getSpeed().getZ());
-		collisionPoints[0] -= this->getSpeed().getZ();
-		collisionPoints[2] -= this->getSpeed().getZ();
-		this->setPosition(newPosition);
+		if (this->getPosition().getZ() > -9.0) {
+			newPosition.setZ(newPosition.getZ() - this->getSpeed().getZ());
+			collisionPoints[0] -= this->getSpeed().getZ();
+			collisionPoints[2] -= this->getSpeed().getZ();
+			collisionPoints[4] -= this->getSpeed().getZ();
+			collisionPoints[6] -= this->getSpeed().getZ();
+			collisionPoints[8] -= this->getSpeed().getZ();
+			this->setPosition(newPosition);
+		}
 		break;
 	case 'd':
 	case 'D':
-		newPosition.setZ(newPosition.getZ() + this->getSpeed().getZ());
-		collisionPoints[0] += this->getSpeed().getZ();
-		collisionPoints[2] += this->getSpeed().getZ();
-		this->setPosition(newPosition);
+		if (this->getPosition().getZ() < 9.0) {
+			newPosition.setZ(newPosition.getZ() + this->getSpeed().getZ());
+			collisionPoints[0] += this->getSpeed().getZ();
+			collisionPoints[2] += this->getSpeed().getZ();
+			collisionPoints[4] += this->getSpeed().getZ();
+			collisionPoints[6] += this->getSpeed().getZ();
+			collisionPoints[8] += this->getSpeed().getZ();
+			this->setPosition(newPosition);
+		}
 		break;
 	}
 }
