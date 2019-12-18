@@ -40,6 +40,7 @@ void Game::create()
 		cubes[index].setSpeed(Vector3D(-0.2f, 0.0f, 0.0f));
 		cubes[index].setOrientationSpeed(Vector3D(0.0f));
 		cubes[index].LoadModel("Asteroid_round.obj");
+		cubes[index].setOrientationSpeed(Vector3D(rand() % 10, rand() % 10 ,rand() %10 ));
 		mainScene->addObstacleObject(cubes + index);
 	}
 
@@ -55,6 +56,7 @@ void Game::create()
 		cylinders[index].setSpeed(Vector3D(-0.2f, 0.0f, 0.0f));
 		cylinders[index].setOrientationSpeed(Vector3D(0.0f));
 		cylinders[index].LoadModel("Asteroid.obj");
+		cylinders[index].setOrientationSpeed(Vector3D(rand() % 10, rand() % 10, rand() % 10));
 		mainScene->addObstacleObject(cylinders + index);
 	}
 

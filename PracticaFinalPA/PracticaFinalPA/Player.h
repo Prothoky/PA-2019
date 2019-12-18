@@ -11,7 +11,6 @@ private:
 	float collisionPoints[10] = { 0.75*-2.0, 0.75 * 4, 0.75 * 2.0, 0.75 * 4, 0.75 * 0.0, 0.75 * 8, 0.75 * -1.0, 0.75 * 6, 0.75 * 1.0, 0.75 * 6 };	//Coordenadas de los puntos de colisión. Van x, z para cada punto (x[0], z[0], x[1], z[1], x[2], z[2]...)
 	int collisionPointsNumber = 5;	//Número de puntos de colisión
 
-
 public:
 	Player(const Vector3D &position);
 	Player(const Vector3D &position, float* collisionPoints, const int &collisionPointsNumber);

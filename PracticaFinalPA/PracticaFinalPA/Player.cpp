@@ -27,7 +27,7 @@ bool isAffectedByGravity;
 bool collidable;
 */
 
-Player::Player(const Vector3D &position) : GameObject(position, Color(), Vector3D(0.25), Vector3D(), Vector3D(), false, false) {
+Player::Player(const Vector3D &position) : GameObject(position, Color(), Vector3D(0.5), Vector3D(), Vector3D(), false, false) {
 	//this->collisionPointsNumber = 2;
 	//float collisionPoints[] = { 0.5, 0.0, -0.5, 0.0 };
 	//this->collisionPoints = collisionPoints;
